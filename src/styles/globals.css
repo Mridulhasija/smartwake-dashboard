@@ -1,26 +1,69 @@
 @import "tailwindcss";
-
+:root {
+--bg-primary: #020617;
+--bg-secondary: #0f172a;
+--card-bg: rgba(255, 255, 255, 0.06);
+--border-color: rgba(255, 255, 255, 0.1);
+--text-primary: #f8fafc;
+--text-secondary: #94a3b8;
+}
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+margin: 0;
+padding: 0;
+box-sizing: border-box;
 }
-
 html {
-  scroll-behavior: smooth;
+scroll-behavior: smooth;
 }
-
 body {
-  font-family: Inter, sans-serif;
-  background: #020617;
-  color: white;
+min-height: 100vh;
+font-family: Inter, sans-serif;
+background:
+radial-gradient(circle at top left, rgba(6, 182, 212, 0.15), transparent
+30%),
+radial-gradient(circle at bottom right, rgba(168, 85, 247, 0.15),
+transparent 30%),
+#020617;
+color: var(--text-primary);
+overflow-x: hidden;
 }
-
+button {
+cursor: pointer;
+}
+.glass-card {
+background: rgba(255, 255, 255, 0.05);
+backdrop-filter: blur(24px);
+border: 1px solid rgba(255, 255, 255, 0.08);
+box-shadow:
+0 8px 32px rgba(0, 0, 0, 0.3),
+inset 0 1px 0 rgba(255, 255, 255, 0.06);
+}
+.gradient-button {
+background: linear-gradient(135deg, #06b6d4, #8b5cf6);
+transition: all 0.3s ease;
+}
+.gradient-button:hover {
+transform: translateY(-2px) scale(1.02);
+box-shadow:
+0 10px 25px rgba(6, 182, 212, 0.35),
+0 10px 25px rgba(139, 92, 246, 0.25);
+}
+.dashboard-grid {
+display: grid;
+grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+gap: 1.5rem;
+}
+input {
+transition: all 0.25s ease;
+}
+input:focus {
+border-color: #22d3ee;
+box-shadow: 0 0 0 4px rgba(34, 211, 238, 0.15);
+}
 ::-webkit-scrollbar {
-  width: 8px;
+width: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
-  background: #334155;
-  border-radius: 999px;
+background: linear-gradient(#06b6d4, #8b5cf6);
+border-radius: 999px;
 }
