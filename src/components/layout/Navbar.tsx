@@ -8,8 +8,8 @@ return (
 initial={{ y: -40, opacity: 0 }}
 animate={{ y: 0, opacity: 1 }}
 transition={{ duration: 0.5 }}
-className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/40
-backdrop-blur-2xl"
+className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/60
+backdrop-blur-xl"
 >
 <div className="mx-auto flex max-w-7xl items-center justify-between px-6
 py-5">
@@ -30,7 +30,7 @@ Premium productivity dashboard
 <button
 onClick={() => setDarkMode(!darkMode)}
 className="group rounded-2xl border border-white/10 bg-white/5 p-4
-transition-all duration-300 hover:scale-110 hover:bg-white/10"
+transition-all duration-300 hover:scale-105 hover:bg-white/10"
 >
 <div className="transition-transform duration-300 grouphover:rotate-180">
 {darkMode ? <Sun size={22} /> : <Moon size={22} />}
