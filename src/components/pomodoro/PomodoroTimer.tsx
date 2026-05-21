@@ -36,7 +36,7 @@ text-6xl font-black tracking-tight text-transparent md:text-7xl">
 </div>
 </div>
 </div>
-<div className="bg-gradient-to-r from-cyan-300 to-purple-400 bg-cliptext text-6xl font-black text-transparent md:text-7xl">
+<div className="bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text text-6xl font-black text-transparent md:text-7xl">
 {String(minutes).padStart(2, '0')}:
 {String(remainingSeconds).padStart(2, '0')}
 </div>
