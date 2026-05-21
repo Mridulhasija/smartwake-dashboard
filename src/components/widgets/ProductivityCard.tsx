@@ -8,7 +8,7 @@ return (
 <motion.div
 whileHover={{ y: -5 }}
 transition={{ duration: 0.25 }}
-className="group relative overflow-hidden rounded-[30px] border borderwhite/6 bg-white/[0.03] p-7 backdrop-blur-xl"
+className="group relative overflow-hidden rounded-[30px] border border-white/6 bg-white/[0.03] p-7 backdrop-blur-xl"
 >
 <div className="relative z-10 flex items-start justify-between">
 <div>
@@ -19,7 +19,7 @@ className="group relative overflow-hidden rounded-[30px] border borderwhite/6 bg
 {value}
 </h2>
 </div>
-<div className="mt-2 h-3 w-3 rounded-full bg-cyan-400 shadow-lg shadowcyan-500/40" />
+<div className="mt-2 h-3 w-3 rounded-full bg-cyan-400 shadow-lg shadow-cyan-500/40" />
 </div>
 </motion.div>
 )
