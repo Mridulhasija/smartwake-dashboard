@@ -1,27 +1,90 @@
 import { motion } from 'framer-motion'
+
 interface Props {
-title: string
-value: string
+  title: string
+  value: string
+  accent?: 'cyan' | 'purple' | 'pink'
 }
-function ProductivityCard({ title, value }: Props) {
-return (
-<motion.div
-whileHover={{ y: -5 }}
-transition={{ duration: 0.25 }}
-className="group relative overflow-hidden rounded-[30px] border border-white/6 bg-white/[0.03] p-7 backdrop-blur-xl"
->
-<div className="relative z-10 flex items-start justify-between">
-<div>
-<p className="text-sm font-medium tracking-wide text-slate-400">
-{title}
-</p>
-<h2 className="mt-5 text-5xl font-black tracking-tight text-white">
-{value}
-</h2>
-</div>
-<div className="mt-2 h-3 w-3 rounded-full bg-cyan-400 shadow-lg shadow-cyan-500/40" />
-</div>
-</motion.div>
-)
+
+const accentColors: Record<string, string> = {
+  cyan: '#06b6d4',
+  purple: '#8b5cf6',
+  pink: '#ec4899',
 }
+
+function ProductivityCard({ title, value, accent = 'cyan' }: Props) {
+  const color = accentColors[accent]
+
+  return (
+       <motion.div
+      whileHover={{ y: -5 }}
+      transition={{ duration: 0.25 }}
+      className="stat-card"
+    >
+      {/* Decorative glow blob */}
+      <div
+        style={{
+          position: 'absolute',
+          top: '-20px',
+          right: '-20px',
+          width: '100px',
+          height: '100px',
+          borderRadius: '9999px',
+          background: color,
+          opacity: 0.08,
+          filter: 'blur(30px)',
+          pointerEvents: 'none',
+        }}
+      />
+      <div
+        style={{
+          position: 'relative',
+          zIndex: 1,
+          display: 'flex',
+          alignItems: 'flex-start',
+          justifyContent: 'space-between',
+        }}
+      >
+        <div>
+          <p
+            style={{
+              fontSize: '13px',
+              fontWeight: 500,
+              letterSpacing: '0.04em',
+              color: 'rgb(148,163,184)',
+              margin: 0,
+              textTransform: 'uppercase',
+            }}
+          >
+            {title}
+          </p>
+          <h2
+            style={{
+              marginTop: '16px',
+              fontSize: '52px',
+              fontWeight: 900,
+              letterSpacing: '-0.04em',
+              color: 'white',
+              lineHeight: 1,
+            }}
+          >
+            {value}
+          </h2>
+        </div>
+        <div
+          style={{
+            marginTop: '6px',
+            width: '10px',
+            height: '10px',
+            borderRadius: '9999px',
+            background: color,
+            boxShadow: `0 0 10px ${color}`,
+            flexShrink: 0,
+          }}
+        />
+      </div>
+    </motion.div>
+  )
+}
+
 export default ProductivityCard
