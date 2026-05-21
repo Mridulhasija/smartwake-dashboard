@@ -11,7 +11,7 @@ return (
 <motion.div
 initial={{ opacity: 0, y: 20 }}
 animate={{ opacity: 1, y: 0 }}
-className="flex items-center justify-between rounded-3xl border borderwhite/10 bg-white/5 p-5 transition hover:bg-white/[0.08]"
+className="flex items-center justify-between rounded-3xl border border-white/10 bg-white/5 p-5 transition-all duration-300 hover:bg-white/[0.08]"
 >
 <div>
 <h3 className="text-2xl font-bold tracking-wide text-white">
@@ -32,20 +32,7 @@ alarm.active
 }`}
 >
 <div
-className={`absolute top-1 h-5 w-5 rounded-full bg-white transitionall ${
+className={`absolute top-1 h-5 w-5 rounded-full bg-white transitiona-ll duration-300 ${
 alarm.active ? 'left-8' : 'left-1'
 }`}
 />
-</button>
-<button
-onClick={onDelete}
-className="rounded-xl bg-red-500/10 p-3 transition hover:scale-110
-hover:bg-red-500/20"
->
-<Trash2 className="text-red-400" size={18} />
-</button>
-</div>
-</motion.div>
-)
-}
-export default AlarmCard
