@@ -15,7 +15,7 @@ backdrop-blur-xl"
 py-5">
 <div className="flex items-center gap-3">
 <div
-className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradientto-br from-cyan-400 to-purple-500 shadow-lg shadow-cyan-500/20">
+className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-500 shadow-lg shadow-cyan-500/20">
 <BellRing size={22} />
 </div>
 <div>
@@ -32,7 +32,7 @@ onClick={() => setDarkMode(!darkMode)}
 className="group rounded-2xl border border-white/10 bg-white/5 p-4
 transition-all duration-300 hover:scale-105 hover:bg-white/10"
 >
-<div className="transition-transform duration-300 grouphover:rotate-180">
+<div className="transition-transform duration-300 group-hover:rotate-180">
 {darkMode ? <Sun size={22} /> : <Moon size={22} />}
 </div>
 </button>
