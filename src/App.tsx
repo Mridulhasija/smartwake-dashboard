@@ -12,29 +12,23 @@ return (
 <AuroraBackground />
 <div className="relative z-10">
 <Navbar />
-<main className="mx-auto max-w-7xl px-5 pb-10 pt-6 md:px-8 lg:px-10">
-<section className="relative overflow-hidden rounded-[40px] border
-border-white/10 bg-white/5 px-6 py-16 backdrop-blur-2xl md:px-12">
-<div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10
-via-transparent to-purple-500/10" />
-<div className="relative z-10 flex flex-col items-center textcenter">
-<div className="mb-4 rounded-full border border-cyan-400/20 bgcyan-400/10 px-4 py-2 text-sm font-medium text-cyan-300">
+<section className="glass relative overflow-hidden rounded-[36px] px-6 py-16
+md:px-12">
+<div className="mx-auto max-w-4xl text-center">
+<div className="mb-5 inline-flex rounded-full border border-cyan-400/20 bgcyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
 Productivity Dashboard
 </div>
 <DigitalClock />
 <DateDisplay />
-<p className="mt-6 max-w-2xl text-lg leading-8 text-slate-300">
-Organize your day with beautiful alarms, focus timers,
-productivity tracking, and immersive dashboard interactions.
+<p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
+Organize your day with smart alarms, immersive focus sessions,
+productivity tracking, and smooth dashboard interactions.
 </p>
-<div className="mt-10 flex flex-wrap items-center justify-center
-gap-4">
-<button
-className="gradient-button rounded-2xl px-8 py-4 text-sm font-semibold textwhite">
+<div className="mt-10 flex flex-wrap justify-center gap-4">
+<button className="primary-btn">
 Start Focus Session
 </button>
-<button
-className="rounded-2xl border border-white/10 bg-white/5 px-8 py-4 text-sm fontsemibold text-white transition hover:bg-white/10 hover:scale-[1.02]">
+<button className="secondary-btn">
 Explore Dashboard
 </button>
 </div>
