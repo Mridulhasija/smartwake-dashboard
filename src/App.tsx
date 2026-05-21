@@ -12,7 +12,7 @@ return (
 <AuroraBackground />
 <div className="relative z-10">
 <Navbar />
-<main className="mx-auto max-w-7xl px-4 py-8 md:px-6 lg:px-8">
+<main className="mx-auto max-w-6xl px-4 py-8 md:px-6 lg:px-8">
 <section className="glass rounded-3xl px-6 py-14 md:px-12">
 <div className="mx-auto max-w-4xl text-center">
 <div className="mb-5 inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
