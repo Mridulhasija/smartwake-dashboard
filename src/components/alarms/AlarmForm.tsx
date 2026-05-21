@@ -27,8 +27,7 @@ Alarm Time
 type="time"
 value={time}
 onChange={(e) => setTime(e.target.value)}
-className="w-full rounded-2xl border border-white/10 bg-white/5 p-4
-text-white outline-none"
+className="input-modern"
 />
 </div>
 <div>
@@ -40,15 +39,14 @@ type="text"
 placeholder="Morning Workout"
 value={label}
 onChange={(e) => setLabel(e.target.value)}
-className="w-full rounded-2xl border border-white/10 bg-white/5 p-4
-text-white outline-none"
+className="input-modern"
 />
 </div>
-<button
-className="gradient-button flex w-full items-center justify-center gap-2
-rounded-2xl py-4 text-sm font-semibold text-white">
+<button className="primary-btn w-full">
+<div className="flex items-center justify-center gap-2">
 <Clock3 size={18} />
 Add Smart Alarm
+</div>
 </button>
 </form>
 )
