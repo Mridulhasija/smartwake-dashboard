@@ -1,13 +1,52 @@
 function AuroraBackground() {
-return (
-<div className="absolute inset-0 overflow-hidden">
-<div className="absolute -left-32 top-0 h-[420px] w-[420px] rounded-full
-bg-cyan-500/20 blur-3xl" />
-<div
-className="absolute bottom-0 right-0 h-[420px] w-[420px] rounded-full bg-purple-500/20 blur-3xl" />
-<div
-className="absolute left-1/3 top-1/3 h-[260px] w-[260px] rounded-full bg-pink-500/10 blur-3xl" />
-</div>
-)
+  return (
+    <div
+      style={{
+        position: 'fixed',
+        inset: 0,
+        overflow: 'hidden',
+        pointerEvents: 'none',
+        zIndex: 0,
+      }}
+    >
+      <div
+        style={{
+          position: 'absolute',
+          left: '-8rem',
+          top: 0,
+          height: '480px',
+          width: '480px',
+          borderRadius: '9999px',
+          background: 'rgba(6,182,212,0.18)',
+          filter: 'blur(80px)',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          bottom: 0,
+          right: 0,
+          height: '480px',
+          width: '480px',
+          borderRadius: '9999px',
+          background: 'rgba(139,92,246,0.18)',
+          filter: 'blur(80px)',
+        }}
+      />
+      <div
+        style={{
+          position: 'absolute',
+          left: '33%',
+          top: '33%',
+          height: '300px',
+          width: '300px',
+          borderRadius: '9999px',
+          background: 'rgba(236,72,153,0.10)',
+          filter: 'blur(80px)',
+        }}
+      />
+    </div>
+  )
 }
+
 export default AuroraBackground
