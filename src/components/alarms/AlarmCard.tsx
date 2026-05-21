@@ -1,5 +1,5 @@
 import { Trash2 } from 'lucide-react'
-import { Alarm } from '../../types/alarm'
+import type { Alarm } from '../../types/alarm'
 interface Props {
 alarm: Alarm
 onDelete: () => void
