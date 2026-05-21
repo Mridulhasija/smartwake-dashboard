@@ -23,7 +23,19 @@ Focus Mode
 <h2 className="mb-8 text-4xl font-black text-white">
 Pomodoro Timer
 </h2>
-<div className="timer-screen mb-8">
+<div className="mb-8 flex min-h-[220px] items-center justify-center rounded-
+[30px] border border-white/6 bg-white/[0.03]">
+<div className="text-center">
+<div className="mb-3 text-sm font-medium uppercase tracking-[0.3em] textslate-500">
+Focus Session
+</div>
+<div className="bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text
+text-6xl font-black tracking-tight text-transparent md:text-7xl">
+{String(minutes).padStart(2, '0')}:
+{String(remainingSeconds).padStart(2, '0')}
+</div>
+</div>
+</div>
 <div className="bg-gradient-to-r from-cyan-300 to-purple-400 bg-cliptext text-6xl font-black text-transparent md:text-7xl">
 {String(minutes).padStart(2, '0')}:
 {String(remainingSeconds).padStart(2, '0')}
