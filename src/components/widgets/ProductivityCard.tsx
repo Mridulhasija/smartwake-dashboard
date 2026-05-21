@@ -6,20 +6,23 @@ value: string
 function ProductivityCard({ title, value }: Props) {
 return (
 <motion.div
-whileHover={{ y: -4 }}
+whileHover={{ y: -5 }}
 transition={{ duration: 0.25 }}
-className="glass rounded-[28px] p-6"
+className="group relative overflow-hidden rounded-[30px] border borderwhite/6 bg-white/[0.03] p-7 backdrop-blur-xl"
 >
-<div className="flex items-start justify-between">
+<div className="absolute inset-0 opacity-0 transition duration-300 grouphover:opacity-100">
+<div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bgcyan-500/10 blur-3xl" />
+</div>
+<div className="relative z-10 flex items-start justify-between">
 <div>
-<p className="text-sm font-medium text-slate-400">
+<p className="text-sm font-medium tracking-wide text-slate-400">
 {title}
 </p>
-<h2 className="mt-4 text-5xl font-black tracking-tight text-white">
+<h2 className="mt-5 text-5xl font-black tracking-tight text-white">
 {value}
 </h2>
 </div>
-<div className="h-3 w-3 rounded-full bg-cyan-400 shadow-lg shadowcyan-500/40" />
+<div className="mt-2 h-3 w-3 rounded-full bg-cyan-400 shadow-lg shadowcyan-500/40" />
 </div>
 </motion.div>
 )
