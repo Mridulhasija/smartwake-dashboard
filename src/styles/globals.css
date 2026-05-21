@@ -1,20 +1,26 @@
 @import "tailwindcss";
+
 * {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
+
 html {
-scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
+
 body {
-font-family: Inter, sans-serif;
-background: #020617;
+  font-family: Inter, sans-serif;
+  background: #020617;
+  color: white;
 }
+
 ::-webkit-scrollbar {
-width: 8px;
+  width: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
-background: #334155;
-border-radius: 999px;
+  background: #334155;
+  border-radius: 999px;
 }
