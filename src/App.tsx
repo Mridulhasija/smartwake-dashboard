@@ -7,12 +7,12 @@ import PomodoroTimer from './components/pomodoro/PomodoroTimer'
 import AuroraBackground from './components/background/AuroraBackground'
 function App() {
 return (
-<div className="relative min-h-screen overflow-hidden bg-slate-950 textwhite">
+<div className="relative min-h-screen overflow-hidden bg-slate-950 text-white">
 <AuroraBackground />
 <div className="relative z-10">
 <Navbar />
 <main className="mx-auto max-w-7xl px-6 py-10">
-<section className="flex flex-col items-center justify-center textcenter py-16">
+<section className="flex flex-col items-center justify-center text-center py-16">
 <DigitalClock />
 <DateDisplay />
 <p className="mt-6 max-w-xl text-slate-300">
