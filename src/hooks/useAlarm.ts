@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Alarm } from '../types/alarm'
+import type { Alarm } from '../types/alarm'
 export function useAlarm() {
 const [alarms, setAlarms] = useState<Alarm[]>(() => {
 const saved = localStorage.getItem('alarms')
