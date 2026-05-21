@@ -8,12 +8,12 @@ import AuroraBackground from './components/background/AuroraBackground'
 import ProductivityCard from './components/widgets/ProductivityCard'
 function App() {
 return (
-<div className="app-bg min-h-screen text-white overflow-hidden">
+<div className="app-bg min-h-screen overflow-hidden text-white">
 <AuroraBackground />
 <div className="relative z-10">
 <Navbar />
 <main className="mx-auto max-w-7xl px-4 py-8 md:px-6 lg:px-8">
-<section className="glass rounded-[36px] px-6 py-14 md:px-12">
+<section className="glass rounded-3xl px-6 py-14 md:px-12">
 <div className="mx-auto max-w-4xl text-center">
 <div className="mb-5 inline-flex rounded-full border bordercyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
 Productivity Dashboard
@@ -40,9 +40,9 @@ Explore Dashboard
 <ProductivityCard title="Completed Sessions" value="18" />
 </section>
 <section className="mt-8 grid gap-6 lg:grid-cols-3">
-<div className="glass rounded-[30px] p-7">
+<div className="glass rounded-3xl p-7">
 <div className="mb-6 flex items-center justify-between">
-<h2 className="text-3xl font-bold text-white">
+<h2 className="text-2xl font-bold text-white md:text-3xl">
 Add Alarm
 </h2>
 <div className="rounded-full bg-cyan-500/10 px-3 py-1 text-xs
@@ -52,12 +52,12 @@ Smart Alerts
 </div>
 <AlarmForm />
 </div>
-<div className="glass rounded-[30px] p-7">
+<div className="glass rounded-3xl p-7">
 <PomodoroTimer />
 </div>
-<div className="glass rounded-[30px] p-7">
+<div className="glass rounded-3xl p-7">
 <div className="mb-6 flex items-center justify-between">
-<h2 className="text-3xl font-bold text-white">
+<h2 className="text-2xl font-bold text-white md:text-3xl">
 Upcoming Alarms
 </h2>
 <div className="rounded-full bg-purple-500/10 px-3 py-1 text-xs
