@@ -4,13 +4,18 @@ function DigitalClock() {
 const time = useClock()
 return (
 <motion.h1
-initial={{ opacity: 0, y: 40 }}
+initial={{ opacity: 0, y: 20 }}
 animate={{ opacity: 1, y: 0 }}
-transition={{ duration: 0.8 }}
-className="bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bgclip-text text-6xl font-black tracking-tight text-transparent sm:text-7xl
-md:text-8xl lg:text-9xl"
+transition={{ duration: 0.5 }}
+className="bg-gradient-to-r from-cyan-300 to-purple-400 bg-clip-text
+text-5xl font-black tracking-tight text-transparent sm:text-6xl md:text-7xl
+lg:text-8xl"
 >
-{time.toLocaleTimeString()}
+{time.toLocaleTimeString([], {
+hour: '2-digit',
+minute: '2-digit',
+second: '2-digit',
+})}
 </motion.h1>
 )
 }
