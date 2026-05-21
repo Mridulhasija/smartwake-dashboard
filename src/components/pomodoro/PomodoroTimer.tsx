@@ -24,7 +24,7 @@ Focus Mode
 Pomodoro Timer
 </h2>
 <div className="timer-screen mb-8">
-<div className="bg-gradient-to-r from-cyan-300 to-purple-400 bg-cliptext text-7xl font-black text-transparent md:text-8xl">
+<div className="bg-gradient-to-r from-cyan-300 to-purple-400 bg-cliptext text-6xl font-black text-transparent md:text-7xl">
 {String(minutes).padStart(2, '0')}:
 {String(remainingSeconds).padStart(2, '0')}
 </div>
@@ -32,14 +32,14 @@ Pomodoro Timer
 <div className="flex flex-wrap gap-4">
 <button
 onClick={() => setActive(true)}
-className="timer-btn bg-cyan-500 text-white"
+className="timer-btn bg-cyan-500 text-white hover:bg-cyan-400"
 >
 <Play size={18} />
 Start
 </button>
 <button
 onClick={() => setActive(false)}
-className="timer-btn bg-yellow-500 text-black"
+className="timer-btn bg-yellow-400 text-black hover:bg-yellow-300"
 >
 <Pause size={18} />
 Pause
@@ -49,7 +49,7 @@ onClick={() => {
 setSeconds(1500)
 setActive(false)
 }}
-className="timer-btn bg-red-500 text-white"
+className="timer-btn bg-red-500 text-white hover:bg-red-400"
 >
 <RotateCcw size={18} />
 Reset
