@@ -1,43 +1,96 @@
 import { BellRing, Moon, Sun } from 'lucide-react'
 import { motion } from 'framer-motion'
 import { useDarkMode } from '../../hooks/useDarkMode'
+
 function Navbar() {
-const { darkMode, setDarkMode } = useDarkMode()
-return (
-<motion.nav
-initial={{ y: -40, opacity: 0 }}
-animate={{ y: 0, opacity: 1 }}
-transition={{ duration: 0.5 }}
-className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/60
-backdrop-blur-xl"
->
-<div className="mx-auto flex max-w-7xl items-center justify-between px-6
-py-5">
-<div className="flex items-center gap-3">
-<div
-className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-400 to-purple-500 shadow-lg shadow-cyan-500/20">
-<BellRing size={22} />
-</div>
-<div>
-<h1 className="text-2xl font-black tracking-wide text-white">
-SmartWake
-</h1>
-<p className="text-sm text-slate-400">
-Premium productivity dashboard
-</p>
-</div>
-</div>
-<button
-onClick={() => setDarkMode(!darkMode)}
-className="group rounded-2xl border border-white/10 bg-white/5 p-4
-transition-all duration-300 hover:scale-105 hover:bg-white/10"
->
-<div className="transition-transform duration-300 group-hover:rotate-180">
-{darkMode ? <Sun size={22} /> : <Moon size={22} />}
-</div>
-</button>
-</div>
-</motion.nav>
-)
+  const { darkMode, setDarkMode } = useDarkMode()
+
+  return (
+        <motion.nav
+      initial={{ y: -40, opacity: 0 }}
+      animate={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      className="navbar-glass"
+      style={{ position: 'sticky', top: 0, zIndex: 50 }}
+    >
+      <div
+        style={{
+          maxWidth: '1280px',
+          margin: '0 auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'space-between',
+          padding: '16px 24px',
+        }}
+      >
+        <div style={{ display: 'flex', alignItems: 'center', gap: '12px' }}>
+          <div
+            style={{
+              display: 'flex',
+              height: '44px',
+              width: '44px',
+              alignItems: 'center',
+              justifyContent: 'center',
+              borderRadius: '14px',
+              background: 'linear-gradient(135deg, #06b6d4, #8b5cf6)',
+              boxShadow: '0 4px 20px rgba(6,182,212,0.3)',
+              flexShrink: 0,
+            }}
+          >
+            <BellRing size={20} color="white" />
+          </div>
+          <div>
+            <h1
+              style={{
+                fontSize: '22px',
+                fontWeight: 900,
+                color: 'white',
+                margin: 0,
+                letterSpacing: '-0.02em',
+              }}
+            >
+              SmartWake
+            </h1>
+            <p
+              style={{
+                fontSize: '12px',
+                color: 'rgb(148,163,184)',
+                margin: 0,
+              }}
+            >
+              Premium productivity dashboard
+            </p>
+          </div>
+        </div>
+
+        <button
+          onClick={() => setDarkMode(!darkMode)}
+          style={{
+            borderRadius: '14px',
+            border: '1px solid rgba(255,255,255,0.1)',
+            background: 'rgba(255,255,255,0.05)',
+            padding: '10px',
+            color: 'white',
+            transition: 'all 0.3s ease',
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+          onMouseEnter={(e) => {
+            ;(e.currentTarget as HTMLButtonElement).style.background =
+              'rgba(255,255,255,0.1)'
+          }}
+          onMouseLeave={(e) => {
+            ;(e.currentTarget as HTMLButtonElement).style.background =
+              'rgba(255,255,255,0.05)'
+          }}
+          aria-label="Toggle dark mode"
+        >
+          {darkMode ? <Sun size={20} /> : <Moon size={20} />}
+        </button>
+      </div>
+    </motion.nav>
+  )
 }
+
 export default Navbar
