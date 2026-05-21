@@ -15,12 +15,12 @@ return (
 <main className="mx-auto max-w-7xl px-4 py-8 md:px-6 lg:px-8">
 <section className="glass rounded-3xl px-6 py-14 md:px-12">
 <div className="mx-auto max-w-4xl text-center">
-<div className="mb-5 inline-flex rounded-full border bordercyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
+<div className="mb-5 inline-flex rounded-full border border-cyan-400/20 bg-cyan-400/10 px-4 py-2 text-sm font-semibold text-cyan-300">
 Productivity Dashboard
 </div>
 <DigitalClock />
 <DateDisplay />
-<p className="mx-auto mt-6 max-w-2xl text-lg leading-8 textslate-300">
+<p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-slate-300">
 Organize your day with smart alarms, focus sessions,
 productivity tracking and immersive dashboard interactions.
 </p>
