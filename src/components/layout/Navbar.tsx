@@ -1,19 +1,43 @@
-import { Moon, Sun } from 'lucide-react'
+import { BellRing, Moon, Sun } from 'lucide-react'
+import { motion } from 'framer-motion'
 import { useDarkMode } from '../../hooks/useDarkMode'
 function Navbar() {
 const { darkMode, setDarkMode } = useDarkMode()
 return (
-<nav className="flex items-center justify-between px-6 py-5">
-<h1 className="text-2xl font-bold tracking-wide text-cyan-400">
+<motion.nav
+initial={{ y: -40, opacity: 0 }}
+animate={{ y: 0, opacity: 1 }}
+transition={{ duration: 0.5 }}
+className="sticky top-0 z-50 border-b border-white/5 bg-slate-950/40
+backdrop-blur-2xl"
+>
+<div className="mx-auto flex max-w-7xl items-center justify-between px-6
+py-5">
+<div className="flex items-center gap-3">
+<div
+className="flex h-12 w-12 items-center justify-center rounded-2xl bg-gradientto-br from-cyan-400 to-purple-500 shadow-lg shadow-cyan-500/20">
+<BellRing size={22} />
+</div>
+<div>
+<h1 className="text-2xl font-black tracking-wide text-white">
 SmartWake
 </h1>
+<p className="text-sm text-slate-400">
+Premium productivity dashboard
+</p>
+</div>
+</div>
 <button
 onClick={() => setDarkMode(!darkMode)}
-className="rounded-full border border-white/10 bg-white/10 p-3
-transition hover:scale-110"
->{darkMode ? <Sun size={20} /> : <Moon size={20} />}
+className="group rounded-2xl border border-white/10 bg-white/5 p-4
+transition-all duration-300 hover:scale-110 hover:bg-white/10"
+>
+<div className="transition-transform duration-300 grouphover:rotate-180">
+{darkMode ? <Sun size={22} /> : <Moon size={22} />}
+</div>
 </button>
-</nav>
+</div>
+</motion.nav>
 )
 }
 export default Navbar
