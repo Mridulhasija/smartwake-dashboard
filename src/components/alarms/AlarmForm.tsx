@@ -1,3 +1,4 @@
+import { Clock3 } from 'lucide-react'
 import { useState } from 'react'
 import { useAlarm } from '../../hooks/useAlarm'
 function AlarmForm() {
@@ -17,27 +18,37 @@ setTime('')
 setLabel('')
 }
 return (
-<form onSubmit={handleSubmit} className="space-y-4">
+<form onSubmit={handleSubmit} className="space-y-5">
+<div>
+<label className="mb-2 block text-sm font-medium text-slate-300">
+Alarm Time
+</label>
 <input
 type="time"
 value={time}
 onChange={(e) => setTime(e.target.value)}
-className="w-full rounded-xl border border-white/10 bg-white/10 p-3
-outline-none"
+className="w-full rounded-2xl border border-white/10 bg-white/5 p-4
+text-white outline-none"
 />
+</div>
+<div>
+<label className="mb-2 block text-sm font-medium text-slate-300">
+Alarm Label
+</label>
 <input
 type="text"
-placeholder="Alarm Label"
+placeholder="Morning Workout"
 value={label}
 onChange={(e) => setLabel(e.target.value)}
-className="w-full rounded-xl border border-white/10 bg-white/10 p-3 
-outline-none"
+className="w-full rounded-2xl border border-white/10 bg-white/5 p-4
+text-white outline-none"
 />
+</div>
 <button
-className="w-full rounded-xl bg-cyan-500 py-3 font-semibold transition
-hover:scale-[1.02]"
->
-Add Alarm
+className="gradient-button flex w-full items-center justify-center gap-2
+rounded-2xl py-4 text-sm font-semibold text-white">
+<Clock3 size={18} />
+Add Smart Alarm
 </button>
 </form>
 )
