@@ -36,3 +36,16 @@ className={`absolute top-1 h-5 w-5 rounded-full bg-white transitiona-ll duration
 alarm.active ? 'left-8' : 'left-1'
 }`}
 />
+</button>
+<button
+onClick={onDelete}
+className="rounded-xl bg-red-500/10 p-3 transition-all duration-300
+hover:scale-105 hover:bg-red-500/20"
+>
+<Trash2 className="text-red-400" size={18} />
+</button>
+</div>
+</motion.div>
+)
+}
+export default AlarmCard
