@@ -142,7 +142,7 @@ src/
 ## 📱 Mobile Responsive Design
 
 ![mobile-responsive](./public/mobile-responsive.png)
-![mobile-responsives](./public/mobilr-responsives.png)
+![mobile-responsives](./public/mobile-reponsives.png)
 
 ---
 
