@@ -141,7 +141,8 @@ src/
 
 ## 📱 Mobile Responsive Design
 
-Add Screenshot Here
+![mobile-responsive](./public/mobile-responsive.png)
+![mobile-responsives](./public/mobile-responsives.png)
 
 ---
 
@@ -150,7 +151,7 @@ Add Screenshot Here
 ## 1️⃣ Clone Repository
 
 ```bash
-git clone https://github.com/your-username/smartwake-ai.git
+git clone https://github.com/Mridulhasija/smartwake-ai.git
 ```
 
 ## 2️⃣ Navigate to Project
