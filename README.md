@@ -129,27 +129,19 @@ src/
 
 ## 🖥️ Dashboard UI
 
-```md
 ![Dashboard](./public/hero-dashboard.png)
-```
 
 ## ⏰ Alarm Management
 
-```md
 ![Alarm System](./public/alarm-system.png)
-```
 
 ## 🍅 Pomodoro Timer
 
-```md
 ![Pomodoro](./public/pomodoro-timer.png)
-```
 
 ## 📱 Mobile Responsive Design
 
-```md
 Add Screenshot Here
-```
 
 ---
 
