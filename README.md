@@ -130,7 +130,7 @@ src/
 ## 🖥️ Dashboard UI
 
 ```md
-<img src="./public/hero-dashboard.png" width="900"/>
+![Dashboard](./public/hero-dashboard.png)
 ```
 
 ## ⏰ Alarm Management
